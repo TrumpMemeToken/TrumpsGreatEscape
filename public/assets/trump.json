@@ -1,0 +1,398 @@
+{
+	"textures": [
+		{
+			"image": "trump.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 256,
+				"h": 353
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "4_Dead8.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 102,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 102,
+						"h": 46
+					}
+				},
+				{
+					"filename": "4_Dead1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 44,
+						"w": 98,
+						"h": 73
+					},
+					"frame": {
+						"x": 105,
+						"y": 1,
+						"w": 98,
+						"h": 73
+					}
+				},
+				{
+					"filename": "2_Throw0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 50,
+						"h": 84
+					},
+					"frame": {
+						"x": 205,
+						"y": 1,
+						"w": 50,
+						"h": 84
+					}
+				},
+				{
+					"filename": "4_Dead0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 56,
+						"w": 98,
+						"h": 61
+					},
+					"frame": {
+						"x": 1,
+						"y": 49,
+						"w": 98,
+						"h": 61
+					}
+				},
+				{
+					"filename": "4_Dead2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 35,
+						"w": 98,
+						"h": 56
+					},
+					"frame": {
+						"x": 101,
+						"y": 76,
+						"w": 98,
+						"h": 56
+					}
+				},
+				{
+					"filename": "4_Dead3.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 32,
+						"w": 98,
+						"h": 56
+					},
+					"frame": {
+						"x": 1,
+						"y": 112,
+						"w": 98,
+						"h": 56
+					}
+				},
+				{
+					"filename": "3_Walk0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 53,
+						"h": 81
+					},
+					"frame": {
+						"x": 201,
+						"y": 87,
+						"w": 53,
+						"h": 81
+					}
+				},
+				{
+					"filename": "4_Dead4.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 26,
+						"w": 98,
+						"h": 50
+					},
+					"frame": {
+						"x": 101,
+						"y": 134,
+						"w": 98,
+						"h": 50
+					}
+				},
+				{
+					"filename": "4_Dead6.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 8,
+						"w": 98,
+						"h": 50
+					},
+					"frame": {
+						"x": 1,
+						"y": 170,
+						"w": 98,
+						"h": 50
+					}
+				},
+				{
+					"filename": "3_Walk1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 53,
+						"h": 81
+					},
+					"frame": {
+						"x": 201,
+						"y": 170,
+						"w": 53,
+						"h": 81
+					}
+				},
+				{
+					"filename": "4_Dead7.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 8,
+						"w": 98,
+						"h": 47
+					},
+					"frame": {
+						"x": 101,
+						"y": 186,
+						"w": 98,
+						"h": 47
+					}
+				},
+				{
+					"filename": "4_Dead5.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 102,
+						"h": 117
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 17,
+						"w": 92,
+						"h": 50
+					},
+					"frame": {
+						"x": 1,
+						"y": 222,
+						"w": 92,
+						"h": 50
+					}
+				},
+				{
+					"filename": "6_Punch1.webp",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 56,
+						"h": 84
+					},
+					"frame": {
+						"x": 95,
+						"y": 235,
+						"w": 56,
+						"h": 84
+					}
+				},
+				{
+					"filename": "1_Jump0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 78
+					},
+					"frame": {
+						"x": 1,
+						"y": 274,
+						"w": 56,
+						"h": 78
+					}
+				},
+				{
+					"filename": "1_Jump1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 78
+					},
+					"frame": {
+						"x": 1,
+						"y": 274,
+						"w": 56,
+						"h": 78
+					}
+				},
+				{
+					"filename": "1_Jump2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 78
+					},
+					"frame": {
+						"x": 1,
+						"y": 274,
+						"w": 56,
+						"h": 78
+					}
+				},
+				{
+					"filename": "5_Turn1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 50,
+						"h": 84
+					},
+					"frame": {
+						"x": 153,
+						"y": 253,
+						"w": 50,
+						"h": 84
+					}
+				},
+				{
+					"filename": "5_Turn2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 50,
+						"h": 84
+					},
+					"frame": {
+						"x": 205,
+						"y": 253,
+						"w": 50,
+						"h": 84
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:0597150c7740ee7522cbef98a8e55305:d5814f2beae1c035f942723f8c796a14:fc6edf45857cd2994e9b96955417b6fc$"
+	}
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="64" tileheight="64" infinite="0" nextlayerid="20" nextobjectid="560">
+ <editorsettings>
+  <export target="map4.json" format="json"/>
+ </editorsettings>
+ <tileset firstgid="1" name="redsquare" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="redsquare.webp" width="64" height="64"/>
+  <tile id="0">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="2" name="desk" tilewidth="512" tileheight="128" tilecount="1" columns="1">
+  <properties>
+   <property name="collides" type="bool" value="true"/>
+  </properties>
+  <image source="desk.webp" width="512" height="128"/>
+  <tile id="0">
+   <properties>
+    <property name="collides" type="bool" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <objectgroup id="3" name="objects">
+  <object id="148" name="exit" x="21312" y="2752" width="62" height="58">
+   <properties>
+    <property name="event" value="next-level"/>
+   </properties>
+  </object>
+  <object id="162" name="monster" x="16512" y="2944" width="64" height="128"/>
+  <object id="169" name="fire" x="14521.2" y="3069.21" width="64" height="64"/>
+  <object id="173" name="dragon" x="15134" y="2972.67" width="64" height="96"/>
+  <object id="188" name="flower" x="15454.2" y="2941.62" width="64" height="64"/>
+  <object id="277" name="coin" x="14912" y="2496" width="64" height="64"/>
+  <object id="278" name="coin" x="14729.1" y="2294.91" width="64" height="64"/>
+  <object id="279" name="coin" x="14400" y="2880" width="64" height="64"/>
+  <object id="282" name="coin" x="14464" y="2880" width="64" height="64"/>
+  <object id="283" name="coin" x="18048" y="2560" width="64" height="64"/>
+  <object id="284" name="coin" x="18048" y="2624" width="64" height="64"/>
+  <object id="285" name="coin" x="18048" y="2688" width="64" height="64"/>
+  <object id="286" name="coin" x="18048" y="2816" width="64" height="64"/>
+  <object id="287" name="coin" x="18048" y="2944" width="64" height="64"/>
+  <object id="288" name="coin" x="18048" y="2880" width="64" height="64"/>
+  <object id="289" name="coin" x="17152" y="2496" width="64" height="64"/>
+  <object id="290" name="coin" x="18048" y="2752" width="64" height="64"/>
+  <object id="291" name="monster" x="17024" y="2752" width="64" height="64"/>
+  <object id="313" name="bird" x="18304" y="2496" width="64" height="64"/>
+  <object id="314" name="bird" x="18112" y="2204" width="64" height="64"/>
+  <object id="403" name="crab" x="14272" y="2688" width="64" height="64"/>
+  <object id="404" name="crab" x="13952" y="2944" width="64" height="64"/>
+  <object id="413" name="firewalker" x="13376" y="3008" width="64" height="64"/>
+  <object id="414" name="firewalker" x="12992" y="3008" width="64" height="64"/>
+  <object id="415" name="firewalker" x="15040" y="2816" width="64" height="64"/>
+  <object id="416" name="firewalker" x="14720" y="2816" width="64" height="64"/>
+  <object id="417" name="firewalker" x="16832" y="2496" width="64" height="64"/>
+  <object id="418" name="firewalker" x="16832" y="2752" width="64" height="64"/>
+  <object id="419" name="firewalker" x="17024" y="3008" width="64" height="64"/>
+  <object id="420" name="firewalker" x="17216" y="3008" width="64" height="64"/>
+  <object id="421" name="firewalker" x="15872" y="3008" width="64" height="64"/>
+  <object id="530" name="player-spawn" x="64" y="605" width="64" height="96"/>
+  <object id="531" name="boss" x="503.894" y="386.667" width="270" height="189"/>
+ </objectgroup>
+ <layer id="10" name="obstacles" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="19" name="layer1" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="9" name="ground" width="20" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+</map>

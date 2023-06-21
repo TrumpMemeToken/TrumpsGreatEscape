@@ -1,0 +1,125 @@
+{
+	"textures": [
+		{
+			"image": "trumpsymbol.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 274,
+				"h": 63
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "coin1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 64,
+						"h": 61
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 64,
+						"h": 61
+					}
+				},
+				{
+					"filename": "coin2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 58,
+						"h": 61
+					},
+					"frame": {
+						"x": 67,
+						"y": 1,
+						"w": 58,
+						"h": 61
+					}
+				},
+				{
+					"filename": "coin3.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 3,
+						"w": 50,
+						"h": 61
+					},
+					"frame": {
+						"x": 127,
+						"y": 1,
+						"w": 50,
+						"h": 61
+					}
+				},
+				{
+					"filename": "coin5.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 3,
+						"w": 50,
+						"h": 61
+					},
+					"frame": {
+						"x": 179,
+						"y": 1,
+						"w": 50,
+						"h": 61
+					}
+				},
+				{
+					"filename": "coin4.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 11,
+						"y": 3,
+						"w": 42,
+						"h": 61
+					},
+					"frame": {
+						"x": 231,
+						"y": 1,
+						"w": 42,
+						"h": 61
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:6a96b4dfeb0358b7e69c5061b9496657:cd801772283efeb4c612a51dc64a2a9e:2fdc5ed6b8281ec80dd4d18d9cd545b3$"
+	}
+}

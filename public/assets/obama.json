@@ -1,0 +1,251 @@
+{
+	"textures": [
+		{
+			"image": "obama.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 216,
+				"h": 232
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "1_Dead0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 7,
+						"w": 46,
+						"h": 46
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 46,
+						"h": 46
+					}
+				},
+				{
+					"filename": "1_Dead2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 7,
+						"w": 64,
+						"h": 50
+					},
+					"frame": {
+						"x": 49,
+						"y": 1,
+						"w": 64,
+						"h": 50
+					}
+				},
+				{
+					"filename": "1_Dead1.webp",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 115,
+						"y": 1,
+						"w": 64,
+						"h": 64
+					}
+				},
+				{
+					"filename": "0_Idle0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 46,
+						"h": 81
+					},
+					"frame": {
+						"x": 1,
+						"y": 49,
+						"w": 46,
+						"h": 81
+					}
+				},
+				{
+					"filename": "1_Jump0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 78
+					},
+					"frame": {
+						"x": 49,
+						"y": 53,
+						"w": 56,
+						"h": 78
+					}
+				},
+				{
+					"filename": "0_Idle1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 46,
+						"h": 81
+					},
+					"frame": {
+						"x": 107,
+						"y": 67,
+						"w": 46,
+						"h": 81
+					}
+				},
+				{
+					"filename": "2_Kick0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 81
+					},
+					"frame": {
+						"x": 155,
+						"y": 67,
+						"w": 56,
+						"h": 81
+					}
+				},
+				{
+					"filename": "4_Throw0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 3,
+						"w": 46,
+						"h": 81
+					},
+					"frame": {
+						"x": 1,
+						"y": 132,
+						"w": 46,
+						"h": 81
+					}
+				},
+				{
+					"filename": "3_Punch0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 56,
+						"h": 81
+					},
+					"frame": {
+						"x": 49,
+						"y": 133,
+						"w": 56,
+						"h": 81
+					}
+				},
+				{
+					"filename": "5_Walk0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 53,
+						"h": 81
+					},
+					"frame": {
+						"x": 107,
+						"y": 150,
+						"w": 53,
+						"h": 81
+					}
+				},
+				{
+					"filename": "5_Walk1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 56,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 3,
+						"w": 53,
+						"h": 81
+					},
+					"frame": {
+						"x": 162,
+						"y": 150,
+						"w": 53,
+						"h": 81
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:7cf62387e88d5159ac9f29a67a131c11:81a0a56465fe3ee5b402fbc5dfb5ce80:34898ae15200396e4c78210f9bd1584f$"
+	}
+}

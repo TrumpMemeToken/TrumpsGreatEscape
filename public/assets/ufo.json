@@ -1,0 +1,188 @@
+{
+	"textures": [
+		{
+			"image": "ufo.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 130,
+				"h": 765
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "saucer_06.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "saucer_07.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 1,
+						"y": 115,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "saucer_08.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 112
+					},
+					"frame": {
+						"x": 1,
+						"y": 229,
+						"w": 128,
+						"h": 112
+					}
+				},
+				{
+					"filename": "saucer_05.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 106
+					},
+					"frame": {
+						"x": 1,
+						"y": 343,
+						"w": 128,
+						"h": 106
+					}
+				},
+				{
+					"filename": "saucer_04.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 93
+					},
+					"frame": {
+						"x": 1,
+						"y": 451,
+						"w": 128,
+						"h": 93
+					}
+				},
+				{
+					"filename": "saucer_03.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 80
+					},
+					"frame": {
+						"x": 1,
+						"y": 546,
+						"w": 128,
+						"h": 80
+					}
+				},
+				{
+					"filename": "saucer_01.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 67
+					},
+					"frame": {
+						"x": 1,
+						"y": 628,
+						"w": 128,
+						"h": 67
+					}
+				},
+				{
+					"filename": "saucer_02.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 11,
+						"w": 128,
+						"h": 67
+					},
+					"frame": {
+						"x": 1,
+						"y": 697,
+						"w": 128,
+						"h": 67
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:df24ae73403809c5a7f2a8708fef2c96:e329c81bff9261f098bb6cc33c9a0d96:51ba97839ba16835cfbad4cd9a572f00$"
+	}
+}

@@ -1,0 +1,293 @@
+{
+	"textures": [
+		{
+			"image": "gary.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 461,
+				"h": 127
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "1_Dead1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 0,
+						"w": 70,
+						"h": 80
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 70,
+						"h": 80
+					}
+				},
+				{
+					"filename": "1_Dead7.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 39,
+						"w": 84,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 83,
+						"w": 84,
+						"h": 41
+					}
+				},
+				{
+					"filename": "3_Jump0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 58,
+						"h": 77
+					},
+					"frame": {
+						"x": 73,
+						"y": 1,
+						"w": 58,
+						"h": 77
+					}
+				},
+				{
+					"filename": "1_Dead2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 35,
+						"w": 81,
+						"h": 45
+					},
+					"frame": {
+						"x": 87,
+						"y": 80,
+						"w": 81,
+						"h": 45
+					}
+				},
+				{
+					"filename": "1_Dead3.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 39,
+						"w": 81,
+						"h": 41
+					},
+					"frame": {
+						"x": 133,
+						"y": 1,
+						"w": 81,
+						"h": 41
+					}
+				},
+				{
+					"filename": "2_Walk0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 54,
+						"h": 80
+					},
+					"frame": {
+						"x": 170,
+						"y": 44,
+						"w": 54,
+						"h": 80
+					}
+				},
+				{
+					"filename": "1_Dead4.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 39,
+						"w": 81,
+						"h": 41
+					},
+					"frame": {
+						"x": 216,
+						"y": 1,
+						"w": 81,
+						"h": 41
+					}
+				},
+				{
+					"filename": "2_Walk1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 54,
+						"h": 80
+					},
+					"frame": {
+						"x": 226,
+						"y": 44,
+						"w": 54,
+						"h": 80
+					}
+				},
+				{
+					"filename": "0_Idle0.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 64,
+						"h": 96
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 14,
+						"w": 47,
+						"h": 82
+					},
+					"frame": {
+						"x": 282,
+						"y": 44,
+						"w": 47,
+						"h": 82
+					}
+				},
+				{
+					"filename": "1_Dead5.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 39,
+						"w": 81,
+						"h": 41
+					},
+					"frame": {
+						"x": 299,
+						"y": 1,
+						"w": 81,
+						"h": 41
+					}
+				},
+				{
+					"filename": "0_Idle1.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 46,
+						"h": 80
+					},
+					"frame": {
+						"x": 382,
+						"y": 1,
+						"w": 46,
+						"h": 80
+					}
+				},
+				{
+					"filename": "0_Idle2.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 46,
+						"h": 80
+					},
+					"frame": {
+						"x": 331,
+						"y": 44,
+						"w": 46,
+						"h": 80
+					}
+				},
+				{
+					"filename": "1_Dead6.webp",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 84,
+						"h": 80
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 39,
+						"w": 81,
+						"h": 41
+					},
+					"frame": {
+						"x": 379,
+						"y": 83,
+						"w": 81,
+						"h": 41
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b18b794afc03db5abcd071529144685b:441f8cee8a064f5abb5e2f863521e644:d70716ec45cae291c8fe39db1c4def48$"
+	}
+}

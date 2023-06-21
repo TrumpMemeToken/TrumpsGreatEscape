@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "es6",
+		"strict": true,
+		"resolveJsonModule": true,
+		"noImplicitAny": false,
+		"noEmit": true,
+		"allowJs": true,
+		"skipLibCheck": true,
+		"jsx": "preserve",
+		"importHelpers": true,
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"sourceMap": true,
+		"isolatedModules": true,
+		"baseUrl": "./src",
+		"paths": {
+		  "~/*": ["./*"]
+		},
+		"typeRoots": [
+			"node_modules/@types",
+			"node_module/phaser/types"
+		],
+		"types": [
+			"phaser"
+		]
+	},
+	"include": [
+		"src/**/*",
+		"node_modules/phaser3-rex-plugins-types"
+	],
+	"exclude": ["node_modules", "dist"]
+}

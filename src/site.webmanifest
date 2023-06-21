@@ -1,0 +1,17 @@
+{
+    "name": "Trump's Great Escape",
+    "short_name": "TGE",
+    "icons": [
+        {
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#8d93fc",
+    "background_color": "#8d93fc",
+    "display": "standalone",
+    "description": "2D Classic Platform Game",
+    "start_url": "https://letsmakememesgreatagain.com/trumpsgreatescape/index.html?fullscreen=true"
+    
+}

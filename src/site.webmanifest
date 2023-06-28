@@ -9,6 +9,7 @@
         }
     ],
     "theme_color": "#8d93fc",
+    "scope": "/trumpsgreatescape/",
     "background_color": "#8d93fc",
     "display": "standalone",
     "description": "2D Classic Platform Game",

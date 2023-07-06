@@ -1,5 +1,5 @@
-var cacheName = 'game-cache-v1.9';
-var cacheWhiteList = [ "game-cache-v1.9" ];
+var cacheName = 'game-cache-v1.10';
+var cacheWhiteList = [ "game-cache-v1.10" ];
 
 var filesToCache = [
   '/trumpsgreatescape/assets/arrow.webp',
@@ -461,7 +461,8 @@ var filesToCache = [
   '/trumpsgreatescape/assets/yourfaceyourass-cs.mp3',
   '/trumpsgreatescape/assets/yourfaceyourass.m4a',
   '/trumpsgreatescape/assets/yourfaceyourass.mp3',
-  '/trumpsgreatescape/assets/press_start_2p.fnt',  
+  '/trumpsgreatescape/assets/press_start_2p.fnt',
+  '/trumpsgreatescape/assets/grfrog.webp',
 ];
 
 self.addEventListener('install', function(e) {

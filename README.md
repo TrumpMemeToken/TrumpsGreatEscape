@@ -13,7 +13,7 @@ To get started, follow these simple steps:
 
 If you want to create a build of the game, simply run:
 
-1. 'npm run build'
+ `npm run build`
 
 This will generate a build version of the game that you can deploy or distribute as needed.
 

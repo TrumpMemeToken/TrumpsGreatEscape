@@ -33,6 +33,7 @@ export function init() {
 
     globalThis.provider = new ethers.providers.Web3Provider(window.ethereum);
     globalThis.balance = 0;
+    globalThis.changeEvent = 0;
     globalThis.adReturn = "game-start";
     globalThis.selectedAddress = "0x000000000000000000000000000000000000dead";
     

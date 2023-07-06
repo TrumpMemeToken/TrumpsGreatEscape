@@ -11,7 +11,7 @@ import ObamaController from "./ObamaController";
 import BidenController from "./BidenController";
 import SamController from "./SamController";
 import GaryController from "./GaryController";
-
+import FrogController from "./FrogController";
 import FireController from "./FireController";
 import FireWalkerController from "./FireWalkerController";
 import FlowerController from "./FlowerController";
@@ -100,8 +100,8 @@ export function creatureCreateSam(ctx, x, y, width, height, enemyCat, collideWit
 
 export function creatureCreateGary(ctx, x, y, width, height, enemyCat, collideWith, controller, player) {
     const gary = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5), 'gary', undefined, {
-        vertices: [{ x: 0, y: 0 }, { x: 84, y: 0 }, { x: 84, y: 80 }, { x: 0, y: 80 }],
-        label: 'sam'
+        vertices: [{ x: 16, y: 0 }, { x:72, y: 0 }, { x: 72, y: 80 }, { x: 16, y: 80 }],
+        label: 'gary'
     })
         .setFixedRotation();
     gary.setMass(0.1);
@@ -264,6 +264,25 @@ export function createCreatureFire(ctx, x, y, width, height, enemyCat, collideWi
     return new FireController(ctx, fire, fire.name);
 }
 
+export function createCreatureFrog(ctx, x, y, width, height, rot, enemyCat, collideWith, controller) {
+    const frog = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5) + 2, 'frog', undefined, {
+        vertices: [{ x: 0, y: 0 }, { x: 16, y: 0 }, { x: 16, y: 16 }, { x: 0, y: 16 }],
+        label: 'frog',
+    })
+        .setFixedRotation();
+    frog.setDepth(10);
+    //frog.setIgnoreGravity(true);
+    frog.setMass(0.001);
+    frog.setCollisionCategory(8);
+    frog.setCollidesWith([1,2]);
+    frog.setName('frog');
+
+    controller.add('frog',frog, frog.body as MatterJS.BodyType);
+
+    return new FrogController(ctx, frog, frog.name, 0, 7, 10, 0.5);
+}
+
+
 export function createCreatureSaw(ctx, x, y, width, height, rot, enemyCat, collideWith, controller) {
     const saw = ctx.matter.add.sprite(x + (width * 0.5), y, 'saw', undefined, {
         angle: rot * Phaser.Math.DEG_TO_RAD,
@@ -284,7 +303,7 @@ export function createCreatureSaw(ctx, x, y, width, height, rot, enemyCat, colli
 }
 
 export function creatureCreatureFireWalker(ctx, x, y, width, height, enemyCat, collideWith, controller) {
-    const firewalker = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5), 'fbiagent', undefined, {
+    const firewalker = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5) , 'fbiagent', undefined, {
         vertices: [{ x: 0, y: 0 }, { x: 64, y: 0 }, { x: 64, y: 96 }, { x: 0, y: 96 }],
         label: 'firewalker'
     })
@@ -323,7 +342,7 @@ export function createCreatureFlower(ctx, x, y, width, height, enemyCat, collide
 
 export function createCreaturePlant(ctx, x, y, width, height, enemyCat, collideWith, controller) {
     const plant = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5), 'plant', undefined, {
-        vertices: [{ x: 0, y: 0 }, { x: 64, y: 0 }, { x: 64, y: 128 }, { x: 0, y: 128 }],
+        vertices: [{ x: 0, y: 0 }, { x: 64, y: 0 }, { x: 64, y: 16 }, { x: 0, y: 16 }],
         label: 'plant'
     })
         .setFixedRotation();
@@ -413,7 +432,7 @@ export function createCreatureBoss(ctx, x, y, width, height, enemyCat, collideWi
 }
 
 
-export function createCreatureTNT(ctx, x, y, width, height, enemyCat, collideWith, controller) {
+export function createCreatureTNT(ctx, x, y, width, height, enemyCat, collideWith, controller, player) {
     const tnt = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5), 'tnt', undefined, {
         vertices: [{ x: 0, y: 0 }, { x: 64, y: 0 }, { x: 64, y: 68 }, { x: 0, y: 68 }],
         label: 'tnt'
@@ -426,7 +445,7 @@ export function createCreatureTNT(ctx, x, y, width, height, enemyCat, collideWit
 
     controller.add('tnt', tnt,tnt.body as MatterJS.BodyType);
 
-    return new TNTController(ctx, tnt, tnt.name);
+    return new TNTController(ctx, tnt, tnt.name, player);
 }
 
 export function createCreatureZeppelin1(ctx, x, y, width, height, enemyCat, collideWith, controller) {
@@ -438,8 +457,8 @@ export function createCreatureZeppelin1(ctx, x, y, width, height, enemyCat, coll
     zep.setDepth(1);
     zep.setMass(5);
     zep.setIgnoreGravity(true);
-    zep.setCollisionCategory(enemyCat);
-    zep.setCollidesWith(collideWith);
+    zep.setCollisionCategory(8);
+    zep.setCollidesWith([]);
     zep.setName('zeppelin1');
     zep.setData('type', 'zeppelin');
 
@@ -480,8 +499,8 @@ export function createCreatureZeppelin2(ctx, x, y, width, height, enemyCat, coll
     zep.setDepth(1);
     zep.setMass(5);
     zep.setIgnoreGravity(true);
-    zep.setCollisionCategory(enemyCat);
-    zep.setCollidesWith(collideWith);
+    zep.setCollisionCategory(8);
+    zep.setCollidesWith([]);
     zep.setName('zeppelin1');
     zep.setData('type', 'zeppelin');
     zep.setName('zeppelin2');

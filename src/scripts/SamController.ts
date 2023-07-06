@@ -113,7 +113,7 @@ export default class SamController {
         if (this.sprite.active == false)
             return false;
 
-        if (!CreatureLogic.hasTileAhead(map, this.scene.cameras.main, this.sprite, true, 0)) {
+        if (!CreatureLogic.hasTileAhead(map, this.scene.cameras.main, this.sprite, true, 0) && this.sprite.body?.velocity.y == 0) {
             if (!this.sprite.flipX)
                 this.stateMachine.setState("move-left");
             else
@@ -135,7 +135,6 @@ export default class SamController {
             return;
         }
         this.moveTime = 0;
-
         if (!this.sprite.flipX) {
             this.stateMachine.setState('move-left');
         }

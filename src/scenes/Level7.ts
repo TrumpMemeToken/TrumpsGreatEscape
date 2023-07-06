@@ -264,13 +264,9 @@ export default class Level7 extends BaseScene {
                 if (bodyA.gameObject === undefined)
                     continue;
 
-                const dx = ~~(bodyA.position.x - bodyB.position.x);
-                const dy = ~~(bodyA.position.y - bodyB.position.y);
-                const { min, max } = bodyA.bounds;
-                const bw = max.x - min.x;
-                const bh = (max.y - min.y) * 0.5;
+                const dy = ~~(bodyB.position.y - bodyA.position.y);
 
-                if (Math.abs(dx) <= bw && Math.abs(dy) <= bh) {
+                if (dy <= 32) {
                     events.emit(bodyA.gameObject?.name + '-blocked', bodyA.gameObject);
                 }
             }
@@ -422,7 +418,10 @@ export default class Level7 extends BaseScene {
 
         this.flowers.forEach(flower => flower.update(deltaTime));
         this.plants.forEach(plant => plant.update(deltaTime));
-        this.birds.forEach(bird => bird.update(deltaTime));
+        this.birds.forEach(bird => {
+            bird.update(deltaTime); 
+            bird.lookahead(this.map);
+        });
         this.bats.forEach(bat => bat.update(deltaTime));
         this.bombs.forEach(bomb => bomb.update(deltaTime));
         this.bears.forEach(bear => bear.update(deltaTime));

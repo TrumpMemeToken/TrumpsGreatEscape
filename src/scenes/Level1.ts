@@ -14,7 +14,7 @@ import BidenController from '../scripts/BidenController';
 import ObamaController from '../scripts/ObamaController';
 import SamController from '../scripts/SamController';
 import GaryController from '../scripts/GaryController';
-
+import FrogController from '../scripts/FrogController';
 import BombController from '../scripts/BombController';
 import * as SceneFactory from '../scripts/SceneFactory';
 import * as AlignmentHelper from '../scripts/AlignmentHelper';
@@ -57,7 +57,7 @@ export default class Level1 extends BaseScene {
     private tnts: TNTController[] = [];
     private bears: BearController[] = [];
     private hoes: HoeController[] = [];
-    
+    private frogs: FrogController[] = [];
     private flies: FlyController[] = [];
     private crows: CrowController[] = [];
     private saws: SawController[] = [];
@@ -106,6 +106,7 @@ export default class Level1 extends BaseScene {
         this.sams = [];
         this.boss = [];
         this.lava = [];
+        this.frogs = [];
         this.objects = [];
         this.sounds = new Map<string, Phaser.Sound.BaseSound>();
 
@@ -254,6 +255,12 @@ export default class Level1 extends BaseScene {
         this.matter.world.convertTilemapLayer(this.ground1, { label: 'ground', friction: 0, frictionStatic: 0 });
         this.matter.world.setBounds(0,0,this.map.widthInPixels, this.map.heightInPixels, 1, true, true,false, false);
 
+/*        this.matter.world.drawDebug = true;
+        this.input.keyboard.on("keydown-I", () => {
+            this.matter.world.drawDebug = !this.matter.world.drawDebug;
+            this.matter.world.debugGraphic.clear();
+        }); */
+
         this.matter.world.on("collisionstart", (e: { pairs: any; }, o1: any, o2: any) => {
             const pairs = e.pairs;
             for (let i = 0; i < pairs.length; i++) {
@@ -263,14 +270,9 @@ export default class Level1 extends BaseScene {
                 if (bodyA.gameObject === undefined)
                     continue;
 
-                const dx = ~~(bodyA.position.x - bodyB.position.x);
-                const dy = ~~(bodyA.position.y - bodyB.position.y);
+                const dy = ~~(bodyB.position.y - bodyA.position.y);
 
-                const { min, max } = bodyA.bounds;
-
-                const bw = max.x - min.x;
-                const bh = (max.y - min.y) * 0.5;
-                if (Math.abs(dx) <= bw && Math.abs(dy) <= bh) {
+                if (dy <= 32) {
                     events.emit(bodyA.gameObject?.name + '-blocked', bodyA.gameObject);
                 }
             }
@@ -314,6 +316,7 @@ export default class Level1 extends BaseScene {
         this.saws.forEach(saw => saw.destroy());
         this.boss.forEach(boss=>boss.destroy());
         this.lava.forEach(lava=>lava.destroy());
+        this.frogs.forEach(frog => frog.destroy());
 
         this.objects.forEach(obj => obj.destroy());
 
@@ -344,8 +347,8 @@ export default class Level1 extends BaseScene {
         this.bidens = this.bidens.filter(e => e.keepObject());
         this.sams = this.sams.filter(e => e.keepObject());
         this.garys = this.garys.filter(e => e.keepObject());
-        
         this.obamas = this.obamas.filter(e => e.keepObject());
+        this.frogs = this.frogs.filter( e => e.keepObject());
         
         this.bears = this.bears.filter(e => e.keepObject());
         this.hoes = this.hoes.filter(e => e.keepObject());
@@ -424,7 +427,10 @@ export default class Level1 extends BaseScene {
         this.bears.forEach(bear => bear.update(deltaTime));
         this.hoes.forEach(hoe => hoe.update(deltaTime));
         this.tnts.forEach(tnt => tnt.update(deltaTime));
-
+        this.frogs.forEach(frog => {
+            frog.update(deltaTime);
+            frog.lookahead(this.map);
+        });
 
         this.saws.forEach(saw => {
             saw.update(deltaTime);

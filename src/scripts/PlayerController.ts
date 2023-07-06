@@ -44,6 +44,7 @@ export default class PlayerController {
     private bonusObjects = ['berry', 'pow', 'star', 'rubber1', 'rubber2', 'rubber3'];
     private standingOnFloor = false;
     private standingOnPlatform = false;
+    private platformId = -1;
     private wasStandingOnFloor = false;
 
     private cannotThrow = false;
@@ -382,6 +383,10 @@ export default class PlayerController {
                         events.emit("plant-touched", body.gameObject, this);
                     }
                     this.stateMachine.setState('hit');
+
+                    if( this.obstacles.isType('sam', body) || this.obstacles.isType('gary', body ) || this.obstacles.isType('biden', body ) ) {
+                        events.emit('coin-taken');
+                    }
                 }
 
                 return;
@@ -516,8 +521,6 @@ export default class PlayerController {
                 case 'window': {
                     // fade out, start another scene
                     if(this.stateMachine.getCurrentState() === 'jump') {
-                        events.emit('coin-taken');
-                        
                         this.sprite.body.velocity.x = 0;
                         this.sprite.body.velocity.y = 0;
                         this.sprite.setIgnoreGravity(true);
@@ -561,7 +564,7 @@ export default class PlayerController {
                 }
                 case 'billboard': {
                     SceneFactory.playSound(this.sounds, 'click');
-                    sprite.setFrame(Phaser.Math.Between(0, 34));
+                    sprite.setFrame(Phaser.Math.Between(0, 49));
                     break;
                 }
                 case 'lightswitch': {
@@ -1541,16 +1544,27 @@ export default class PlayerController {
         }
     }
 
-    private handlePlatform(body: MatterJS.BodyType) {
-        const vec = body.gameObject?.getData('relpos' + body.id);
-        if( vec !== undefined ) {
-            this.sprite.setPosition(
-                Phaser.Math.RoundTo(this.sprite.body.position.x + vec.x),
-                Phaser.Math.RoundTo(this.sprite.body.position.y + vec.y)
-            );
+    public changePosition(x, y, platform: Phaser.Physics.Matter.Sprite) {
+        
+        const solid = platform.body as MatterJS.BodyType;
+        const id = solid.id;
+        if( id != this.platformId || !this.standingOnPlatform) {
+            return;
         }
- 
+
+        this.sprite.setPosition(
+            this.sprite.body?.position.x + x,
+            this.sprite.body?.position.y + y
+        );
+    }
+
+    public changeVelocity() {
+        this.sprite.setVelocityY( -1 * this.playerJump * 2.55 );
+    }
+
+    private handlePlatform(body: MatterJS.BodyType) {
         this.standingOnPlatform = true;      
+        this.platformId = body.id; // incorrect sometimes when called , look at callers
     }
 
     private bounceTile(body: MatterJS.BodyType) {

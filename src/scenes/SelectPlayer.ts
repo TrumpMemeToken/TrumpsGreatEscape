@@ -38,8 +38,8 @@ export default class GameSettingsMenu extends Phaser.Scene {
             this.nextScene = 'level' + this.stats.currLevel;
         }
 
-      // this.nextScene = 'warp'; // For dev
-        this.nextScene = WalletHelper.isNotEligible() ? 'wallet' : 'level1';
+       this.nextScene = 'warp'; // For dev
+      //  this.nextScene = WalletHelper.isNotEligible() ? 'wallet' : 'level1';
 
         this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
             this.destroy();

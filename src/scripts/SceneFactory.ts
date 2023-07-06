@@ -11,6 +11,7 @@ import BarController from './BarController';
 import ObstaclesController from './ObstaclesController';
 import { GameSettings } from '~/scenes/GameSettings';
 import { randomBytes } from 'crypto';
+import PlayerController from './PlayerController';
 
 declare global {
     var musicTune: boolean;
@@ -411,10 +412,12 @@ export function preload(ctx) {
     ctx.load.spritesheet('burger', 'assets/burger.webp', { frameWidth: 64, frameHeight: 64, startFrame: 0, endFrame: 3 });
     
     ctx.load.spritesheet('lab', 'assets/lab.webp', { frameWidth: 64, frameHeight: 136, startFrame: 0, endFrame: 3 });
-    ctx.load.spritesheet('billboards', 'assets/billboards.webp', { frameWidth: 192, frameHeight: 220, startFrame: 0, endFrame: 13 });
+    ctx.load.spritesheet('billboards', 'assets/billboards.webp', { frameWidth: 192, frameHeight: 220, startFrame: 0, endFrame: 49 });
     ctx.load.spritesheet('lightswitch', 'assets/lightswitch.webp', { frameWidth: 64, frameHeight: 64, startFrame: 0, endFrame: 1 });
     ctx.load.spritesheet('fireball', 'assets/fireball.webp', { frameWidth: 32, frameHeight: 32, startFrame: 0, endFrame: 3 });
 
+    ctx.load.spritesheet('frog', 'assets/grfrog.webp', { frameWidth: 16, frameHeight: 16, startFrame: 0, endFrame: 7 });
+   
     // images
     ctx.load.image('heart', 'assets/heart.webp');
     ctx.load.image('berry', 'assets/berry.webp');
@@ -779,7 +782,11 @@ export function basicCreate(ctx, name, x, y, width, height, rotation, enemyCat, 
             break;
         }
         case 'tnt': {
-            ctx.tnts.push(CreatureHelper.createCreatureTNT(ctx, x, y, width, height, enemyCat, collideWith, controller));
+            ctx.tnts.push(CreatureHelper.createCreatureTNT(ctx, x, y, width, height, enemyCat, collideWith, controller, player));
+            break;
+        }
+        case 'frog': {
+            ctx.frogs.push(CreatureHelper.createCreatureFrog(ctx, x, y, width, height, rotation, enemyCat, collideWith, controller));
             break;
         }
         case 'saw': {
@@ -852,7 +859,7 @@ export function basicCreate(ctx, name, x, y, width, height, rotation, enemyCat, 
                 vertices: [{ x: 0, y: 0 }, { x: 192, y: 0 }, { x: 192, y: 32 }, { x: 0, y: 32 }]
             });
 
-            const m = new MovingPlatform(ctx, x, y, to, duration, vert, platform, noautostart, platform.body.id);
+            const m = new MovingPlatform(ctx, x, y, to, duration, vert, platform, noautostart, platform.body.id, player);
             controller.add('platform', platform, platform.body as MatterJS.BodyType);
             break;
         }
@@ -868,7 +875,7 @@ export function basicCreate(ctx, name, x, y, width, height, rotation, enemyCat, 
                 vertices: [{ x: 0, y: 0 }, { x: 64, y: 0 }, { x: 64, y: 64 }, { x: 0, y: 64 }]
             });
 
-            const m = new MovingMushroom(ctx, x, y, to, duration, vert, platform, noautostart, platform.body.id);
+            const m = new MovingMushroom(ctx, x, y, to, duration, vert, platform, noautostart, platform.body.id, player);
             controller.add('mushroom-platform', platform, platform.body as MatterJS.BodyType);
             break;
         }

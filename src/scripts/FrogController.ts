@@ -2,56 +2,56 @@ import StateMachine from "./StateMachine";
 import { sharedInstance as events } from './EventManager';
 import * as CreatureLogic from './CreatureLogic';
 
-export default class CrabController {
+export default class FrogController {
     private scene: Phaser.Scene;
     private sprite: Phaser.Physics.Matter.Sprite;
     private stateMachine: StateMachine;
 
     private moveTime = 0;
+    private velocityX = 0.5;
     private name: string;
-    private garbage = false;
-    private myMoveTime = 0;
+    private myMoveTime = 6000;
+    private garbage: boolean = false;
 
     constructor(
         scene: Phaser.Scene,
         sprite: Phaser.Physics.Matter.Sprite,
-        name: string
+        name: string,
+        startFrame: number,
+        endFrame: number,
+        fps: number,
+        velocityX: number = 0.5,
     ) {
         this.scene = scene;
         this.sprite = sprite;
         this.name = name;
-        this.garbage = false;
-        this.createAnims();
-
+     //   this.velocityX = velocityX;
+        this.createAnim(name, startFrame, endFrame, fps);
         this.stateMachine = new StateMachine(this);
 
         this.stateMachine.addState('idle', {
             onEnter: this.idleOnEnter
         })
-            .addState('move-left', {
-                onEnter: this.moveLeftOnEnter,
-                onUpdate: this.moveLeftOnUpdate
-            })
             .addState('move-right', {
                 onEnter: this.moveRightOnEnter,
-                onUpdate: this.moveRightOnUPdate
+                onUpdate: this.moveRightOnUpdate
             })
-            .addState('dead', {
+            .addState('move-left', {
+                onEnter: this.moveLeftOnEnter,
+                onUpdate: this.moveLeftOnUPdate
             })
             .setState('idle');
 
-        this.myMoveTime = Phaser.Math.Between(2500, 3500);
-
-
+        this.velocityX += Phaser.Math.Between(0.0, + 0.15);
         events.on(this.name + '-stomped', this.handleStomped, this);
         events.on(this.name + '-blocked', this.handleBlocked, this);
     }
 
     destroy() {
-        events.off(this.name + '-stomped', this.handleStomped, this);
         events.off(this.name + '-blocked', this.handleBlocked, this);
+        events.off(this.name + '-stomped', this.handleStomped, this);
 
-        this.cleanup();
+        this.sprite.destroy();
     }
 
     update(deltaTime: number) {
@@ -60,20 +60,6 @@ export default class CrabController {
 
     public getSprite() {
         return this.sprite;
-    }
-
-    private moveLeftOnEnter() {
-        this.moveTime = 0;
-    }
-
-    private moveLeftOnUpdate(deltaTime: number) {
-        this.moveTime += deltaTime;
-        this.sprite.flipX = false;
-        this.sprite.setVelocityX(-2);
-
-        if (this.moveTime > this.myMoveTime) {
-            this.stateMachine.setState('move-right');
-        }
     }
 
     public lookahead(map: Phaser.Tilemaps.Tilemap): boolean {
@@ -95,23 +81,47 @@ export default class CrabController {
         this.moveTime = 0;
     }
 
-    private moveRightOnUPdate(deltaTime: number) {
+    private moveRightOnUpdate(deltaTime: number) {
         this.moveTime += deltaTime;
         this.sprite.flipX = true;
-        this.sprite.setVelocityX(2);
+        this.sprite.setVelocityX(-1 * this.velocityX);
 
         if (this.moveTime > this.myMoveTime) {
             this.stateMachine.setState('move-left');
         }
     }
 
-    private idleOnEnter() {
-        this.sprite.play('idle');
-        this.stateMachine.setState('move-left');
+    private moveLeftOnEnter() {
+        this.moveTime = 0;
     }
 
-    private handleBlocked(crab: Phaser.Physics.Matter.Sprite) {
-        if (this.sprite !== crab) {
+    private moveLeftOnUPdate(deltaTime: number) {
+        this.moveTime += deltaTime;
+        this.sprite.flipX = false;
+        this.sprite.setVelocityX(this.velocityX);
+
+        if (this.moveTime > this.myMoveTime) {
+            this.stateMachine.setState('move-right');
+        }
+    }
+
+    private idleOnEnter() {
+
+        this.sprite.play('idle');
+        this.stateMachine.setState('move-right');
+    }
+
+    private handleStomped(frog: Phaser.Physics.Matter.Sprite) {
+        if (this.sprite !== frog) {
+            return;
+        }
+        this.stateMachine.setState('dead');
+        this.garbage = true;
+        this.cleanup();
+    }
+
+    private handleBlocked(frog: Phaser.Physics.Matter.Sprite) {
+        if (this.sprite !== frog) {
             return;
         }
 
@@ -125,20 +135,10 @@ export default class CrabController {
         }
     }
 
-    private handleStomped(bird: Phaser.Physics.Matter.Sprite) {
-        if (this.sprite !== bird && !this.garbage) {
-            return;
-        }
-        this.garbage = true;
-        events.off(this.name + '-stomped', this.handleStomped, this);
-        this.sprite.play('dead');
-        this.sprite.setStatic(true);
-        this.sprite.setCollisionCategory(0);
-        this.sprite.on('animationcomplete', () => {
-            this.cleanup();
-        });
-        this.stateMachine.setState('dead');
+    public keepObject() {
+        return !this.garbage;
     }
+
 
     private cleanup() {
         if(this.sprite !== undefined) {
@@ -148,33 +148,15 @@ export default class CrabController {
         this.sprite = undefined;
     }
 
-    public keepObject() {
-        return !this.garbage;
+    private createAnim(name: string, startFrame: number, endFrame: number, fps: number) { 
+      this.sprite.anims.create( {
+        key: 'idle',
+        frames: this.sprite.anims.generateFrameNames(name, {
+            start: startFrame, //0,
+            end: endFrame, // 7
+        }),
+        frameRate: fps,
+        repeat: -1,
+      })   
     }
-
-    private createAnims() {
-        this.sprite.anims.create({
-            key: 'idle',
-            frameRate: 10,
-            repeat: -1,
-            frames: this.sprite.anims.generateFrameNames('crab', {
-                start: 0,
-                end: 1,
-                prefix: '0_Idle',
-                suffix: '.webp'
-            })
-        });
-        this.sprite.anims.create({
-            key: 'dead',
-            frameRate: 10,
-            repeat: 0,
-            frames: this.sprite.anims.generateFrameNames('crab', {
-                start: 0,
-                end: 2,
-                prefix: '1_Dead',
-                suffix: '.webp'
-            })
-        });
-    }
-
 }

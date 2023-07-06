@@ -93,11 +93,13 @@ export default class FireWalkerController {
         if (this.sprite.active == false)
             return false;
 
-        if (!CreatureLogic.hasTileAhead(map, this.scene.cameras.main, this.sprite, true, 0)) {
-            if (!this.sprite.flipX)
+        if (!CreatureLogic.hasTileAhead(map, this.scene.cameras.main, this.sprite, true, 0) && this.sprite.body?.velocity.y == 0) {
+            if (!this.sprite.flipX) {
                 this.stateMachine.setState("move-left");
-            else
+            }
+            else {
                 this.stateMachine.setState("move-right");
+            }
             return true;
         }
 
@@ -106,7 +108,7 @@ export default class FireWalkerController {
 
     private idleOnEnter() {
         this.sprite.play('idle');
-        this.stateMachine.setState('move-left');
+        this.stateMachine.setState(this.sprite.flipX ? 'move-left' : 'move-right');
     }
 
     private handleBlocked(fire: Phaser.Physics.Matter.Sprite) {

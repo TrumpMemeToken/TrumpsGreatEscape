@@ -203,7 +203,7 @@ export default class UI extends Phaser.Scene {
         const percent = Phaser.Math.Clamp(value, 0, 100);
         const heart   = ~~ ( percent / 25  );
         this.info.lastHealth = value;
-        this.health?.setFrame(heart);
+        this.health ?.setFrame(heart);
     }
 
     private handleLivesChanged(value: number ) {
@@ -320,13 +320,42 @@ export default class UI extends Phaser.Scene {
     }
 
     private handleCoinTaken() {
-        this.info.coinsCollected -= 5;
+        this.info.coinsCollected -= 10;
         
         if( this.info.coinsCollected < 0  ) {
             this.info.coinsCollected = 0;
         }
         
         this.coinsLabel.text = `x ${this.info.coinsCollected}`;
+
+        const startColor = Phaser.Display.Color.ValueToColor(0xffffff);
+        const endColor = Phaser.Display.Color.ValueToColor(0xff0000);
+
+        this.tweens.addCounter({
+            from: 0,
+            to: 100,
+            duration: 100,
+            repeat: 2,
+            yoyo: true,
+            ease: Phaser.Math.Easing.Sine.InOut,
+            onUpdate: tween => {
+                const value = tween.getValue();
+                const colorObject = Phaser.Display.Color.Interpolate.ColorWithColor(
+                    startColor,
+                    endColor,
+                    100,
+                    value
+                );
+
+                const color = Phaser.Display.Color.GetColor (
+                    colorObject.r,
+                    colorObject.g,
+                    colorObject.b
+                );
+
+                this.coinsLabel.setTint(color);
+            }
+        });
     }
 
     private handleReset() {

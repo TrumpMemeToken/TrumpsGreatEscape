@@ -2634,8 +2634,8 @@
                  "rotation":0,
                  "visible":true,
                  "width":64,
-                 "x":448,
-                 "y":2880
+                 "x":256,
+                 "y":2560
                 }, 
                 {
                  "class":"",
@@ -2679,7 +2679,7 @@
                  "visible":true,
                  "width":56,
                  "x":21151.8,
-                 "y":2588.55
+                 "y":2602.55
                 }, 
                 {
                  "class":"",
@@ -3098,17 +3098,6 @@
                  "width":56,
                  "x":1092,
                  "y":3050
-                }, 
-                {
-                 "class":"",
-                 "height":78,
-                 "id":617,
-                 "name":"player-spawn",
-                 "rotation":0,
-                 "visible":true,
-                 "width":64,
-                 "x":416.485,
-                 "y":3036.76
                 }, 
                 {
                  "class":"",
@@ -4102,8 +4091,7 @@
                  "width":64,
                  "x":11584,
                  "y":192
-                },
-            
+                }, 
                 {
                  "class":"",
                  "height":64,
@@ -4114,7 +4102,8 @@
                  "width":64,
                  "x":11712,
                  "y":256
-                }, 
+                },
+            
                 {
                  "class":"",
                  "height":64,
@@ -4620,6 +4609,17 @@
                  "width":64,
                  "x":13696,
                  "y":832
+                }, 
+                {
+                 "class":"",
+                 "height":78,
+                 "id":763,
+                 "name":"player-spawn",
+                 "rotation":0,
+                 "visible":true,
+                 "width":64,
+                 "x":428,
+                 "y":3054
                 }],
          "opacity":1,
          "properties":[
@@ -4811,13 +4811,13 @@
          "name":"layer1",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":336,
          "x":0,
          "y":0
         }],
  "nextlayerid":18,
- "nextobjectid":762,
+ "nextobjectid":764,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

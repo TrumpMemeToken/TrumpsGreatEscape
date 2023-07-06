@@ -1551,10 +1551,9 @@ export default class PlayerController {
         if( id != this.platformId || !this.standingOnPlatform) {
             return;
         }
-
         this.sprite.setPosition(
-            this.sprite.body?.position.x + x,
-            this.sprite.body?.position.y + y
+            Phaser.Math.RoundTo(this.sprite.body.position.x + x),
+            Phaser.Math.RoundTo(this.sprite.body.position.y + y)
         );
     }
 
@@ -1564,7 +1563,15 @@ export default class PlayerController {
 
     private handlePlatform(body: MatterJS.BodyType) {
         this.standingOnPlatform = true;      
-        this.platformId = body.id; // incorrect sometimes when called , look at callers
+        this.platformId = body.id;
+
+        const vec = body.gameObject?.getData('relpos' + body.id);
+        if( vec !== undefined) {
+            this.sprite.setPosition(
+                Phaser.Math.RoundTo(this.sprite.body.position.x + vec.x),
+                Phaser.Math.RoundTo(this.sprite.body.position.y + vec.y)
+            );
+        }
     }
 
     private bounceTile(body: MatterJS.BodyType) {

@@ -152,7 +152,7 @@ export default class Bonus extends Phaser.Scene {
 
         bg.setPipeline('Light2D');
 
-        const groundTiles = this.map.addTilesetImage('ground', 'groundTiles', 64, 64, 0, 2);
+        const groundTiles = this.map.addTilesetImage('terrainv4', 'groundTiles', 64, 64, 0, 2);
         const propTiles = this.map.addTilesetImage('props', 'propTiles', 64, 64, 0, 2);
         this.ground = this.map.createLayer('ground', [groundTiles]);
         this.layer1 = this.map.createLayer('layer1', [groundTiles]);

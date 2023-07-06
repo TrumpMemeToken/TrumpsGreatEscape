@@ -1,5 +1,5 @@
-var cacheName = 'game-cache-v1.9';
-var cacheWhiteList = [ "game-cache-v1.9" ];
+var cacheName = 'game-cache-v1.10';
+var cacheWhiteList = [ "game-cache-v1.10" ];
 
 var filesToCache = [
   '/trumpsgreatescape/assets/arrow.webp',
@@ -475,41 +475,63 @@ self.skipWaiting();
 });
 
 self.addEventListener('fetch', event => {
-    event.respondWith(
-       caches.match(event.request, { ignoreSearch: true })
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        var requestToCache = event.request.clone();
-  
-        return fetch(requestToCache).then(
-          function(response) {
-            if(!response || response.status !== 200) {
-              return response;
-            }
-  
-            var responseToCache = response.clone();
-            caches.open(cacheName)
-            .then(function(cache) {
-              cache.put(requestToCache, responseToCache);
-            });
-            return response;
-          });
-      })
-    );
+  event.respondWith(handleFetch(event.request));
   });
 
-  self.addEventListener("activate", (event) => {
-    event.waitUntil(
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheWhiteList.indexOf(cacheName) === -1) {
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-    );
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheWhiteList.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
+
+function handleFetch(request) {
+  return new Promise((resolve, reject) => {
+    requestQueue.push({ request, resolve, reject });
+    if (!isProcessingQueue) {
+      processQueue();
+    }
   });
+}
+
+function processQueue() {
+  isProcessingQueue = true;
+
+  if (requestQueue.length === 0) {
+    isProcessingQueue = false;
+    return;
+  }
+
+  const { request, resolve, reject } = requestQueue.shift();
+
+  fetch(request)
+    .then(response => {
+      if (response && response.status === 200) {
+        // Cache the successful response
+        cacheResponse(request, response.clone());
+        resolve(response);
+      } else {
+        reject(new Error('Request failed'));
+      }
+    })
+    .catch(error => {
+      reject(error);
+    })
+    .finally(() => {
+      processQueue();
+    });
+}
+
+function cacheResponse(request, response) {
+  caches.open(cacheName)
+    .then(cache => {
+      cache.put(request, response);
+    });
+}

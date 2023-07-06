@@ -112,15 +112,15 @@ export default class MovingPlatform {
             yoyo: true,
             onUpdate: (tween, target) => {
                 const x = Phaser.Math.RoundTo(this.startX + target.value,0);
-                const dx = x - this.sprite.x; // x - this.sprite.x;
+                const dx = x - this.sprite.x;
              
                 this.sprite.setVelocityX(dx);
                 this.sprite.setPosition(x, this.lastY);
                 
                 this.vy = this.sprite.body.velocity.y;
-                this.vx = dx;//this.sprite.body.velocity.x;
+                this.vx = dx;
 
-                this.player?.changePosition( this.vx, this.vy, this.sprite );
+                if(this.vx != 0 ) this.sprite.setData('relpos' + this.id, { x: this.vx, y: this.vy });
 
                 this.lastX = this.sprite.body.position.x;
                 this.lastY = this.sprite.body.position.y;

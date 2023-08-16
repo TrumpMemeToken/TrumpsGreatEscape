@@ -203,7 +203,7 @@ export default class UI extends Phaser.Scene {
         const percent = Phaser.Math.Clamp(value, 0, 100);
         const heart   = ~~ ( percent / 25  );
         this.info.lastHealth = value;
-        this.health ?.setFrame(heart);
+        this.health?.setFrame(heart);
     }
 
     private handleLivesChanged(value: number ) {
@@ -268,8 +268,11 @@ export default class UI extends Phaser.Scene {
         this.time_start = 0;
         this.lasttick = 0;
         SceneFactory.resetSpawnPoint(this);
-        this.resetSpawnPoint();
+
         this.scene.stop(); // stop UI
+
+
+        this.scene.start( 'level' + this.info.currLevel );
     }
     
     private handleBonusRound() {
@@ -299,7 +302,7 @@ export default class UI extends Phaser.Scene {
             this.info.currLevel = 1;
         }
         else {
-           if(this.info.currLevel < 7)
+           if(this.info.currLevel < 8)
            this.info.currLevel ++;
         }
 

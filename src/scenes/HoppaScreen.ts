@@ -73,7 +73,7 @@ export default class HoppaScreen extends Phaser.Scene {
 
             this.createArrow();
 
-            this.continueLabel = this.add.bitmapText(width * 0.5, height / 2 + 108, 'press_start', 'Connect', 48)
+            this.continueLabel = this.add.bitmapText(width * 0.5, height / 2 + 108, 'press_start', 'Start', 48)
                 .setTint(0xffffff)
                 .setOrigin(0.5)
                 .setAlpha(0);
@@ -253,8 +253,8 @@ export default class HoppaScreen extends Phaser.Scene {
     }
 
     private continueGame() {
-        WalletHelper.init();
-        WalletHelper.getCurrentAccount();
+        WalletHelper.initEmpty();
+     // WalletHelper.getCurrentAccount();
         this.scene.stop();
         this.scene.start('game-start');
     }

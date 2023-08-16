@@ -12,6 +12,7 @@ import BidenController from "./BidenController";
 import SamController from "./SamController";
 import GaryController from "./GaryController";
 import FrogController from "./FrogController";
+import RatController from "./RatController";
 import FireController from "./FireController";
 import FireWalkerController from "./FireWalkerController";
 import FlowerController from "./FlowerController";
@@ -271,10 +272,14 @@ export function createCreatureFrog(ctx, x, y, width, height, rot, enemyCat, coll
     })
         .setFixedRotation();
     frog.setDepth(10);
-    //frog.setIgnoreGravity(true);
-    frog.setMass(0.001);
-    frog.setCollisionCategory(8);
-    frog.setCollidesWith([1,2]);
+    frog.setMass(0.0001);
+    
+    //frog.setCollidesWith([1]);
+    //frog.setCollisionGroup(4);
+
+    frog.setCollisionCategory(enemyCat);
+    frog.setCollidesWith(collideWith);
+
     frog.setName('frog');
 
     controller.add('frog',frog, frog.body as MatterJS.BodyType);
@@ -282,6 +287,25 @@ export function createCreatureFrog(ctx, x, y, width, height, rot, enemyCat, coll
     return new FrogController(ctx, frog, frog.name, 0, 7, 10, 0.5);
 }
 
+export function createCreatureRat(ctx, x, y, width, height, rot, enemyCat, collideWith, controller) {
+    const rat = ctx.matter.add.sprite(x + (width * 0.5), y + (height * 0.5) + 2, 'rat', undefined, {
+        vertices: [{ x: 0, y: 0 }, { x: 28, y: 0 }, { x: 28, y: 18 }, { x: 0, y: 18 }],
+        label: 'rat',
+    })
+        .setFixedRotation();
+    rat.setDepth(10);
+    rat.setMass(0.0001);
+
+
+    rat.setCollisionCategory(enemyCat);
+    rat.setCollidesWith(collideWith);
+
+    rat.setName('rat');
+
+    controller.add('rat',rat, rat.body as MatterJS.BodyType);
+
+    return new RatController(ctx, rat, rat.name);
+}
 
 export function createCreatureSaw(ctx, x, y, width, height, rot, enemyCat, collideWith, controller) {
     const saw = ctx.matter.add.sprite(x + (width * 0.5), y, 'saw', undefined, {
@@ -319,8 +343,6 @@ export function creatureCreatureFireWalker(ctx, x, y, width, height, enemyCat, c
 
     return new FireWalkerController(ctx, firewalker, firewalker.name);
 }
-
-
 
 
 export function createCreatureFlower(ctx, x, y, width, height, enemyCat, collideWith, controller) {

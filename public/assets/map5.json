@@ -15766,12 +15766,12 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",
                          "type":"float",
-                         "value":100
+                         "value":50
                         }, 
                         {
                          "name":"dec_vx",
@@ -15825,7 +15825,7 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",

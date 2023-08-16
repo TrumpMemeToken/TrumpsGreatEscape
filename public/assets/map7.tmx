@@ -1690,7 +1690,7 @@
     <property name="bonus" type="bool" value="false"/>
     <property name="breakable" type="bool" value="false"/>
     <property name="breakdelay" type="float" value="0"/>
-    <property name="collides" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
     <property name="damage" type="float" value="100"/>
     <property name="dec_vx" type="float" value="0"/>
     <property name="dec_vy" type="float" value="0"/>
@@ -1705,7 +1705,7 @@
     <property name="bonus" type="bool" value="false"/>
     <property name="breakable" type="bool" value="false"/>
     <property name="breakdelay" type="float" value="0"/>
-    <property name="collides" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
     <property name="damage" type="float" value="100"/>
     <property name="dec_vx" type="float" value="0"/>
     <property name="dec_vy" type="float" value="0"/>

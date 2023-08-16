@@ -1890,7 +1890,7 @@
     <property name="dstx" type="int" value="17"/>
     <property name="dsty" type="int" value="2"/>
     <property name="duration" type="int" value="2000"/>
-    <property name="level" type="int" value="8"/>
+    <property name="level" type="int" value="7"/>
    </properties>
   </object>
   <object id="3350" name="player-spawn" x="62" y="1387" width="64" height="78"/>
@@ -1903,7 +1903,7 @@
     <property name="dstx" type="int" value="17"/>
     <property name="dsty" type="int" value="2"/>
     <property name="duration" type="int" value="2000"/>
-    <property name="level" type="int" value="7"/>
+    <property name="level" type="int" value="8"/>
    </properties>
   </object>
  </objectgroup>

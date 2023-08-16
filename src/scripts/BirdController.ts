@@ -1,6 +1,6 @@
 import StateMachine from "./StateMachine";
 import { sharedInstance as events } from './EventManager';
-
+import * as CreatureLogic from './CreatureLogic';
 export default class BirdController {
     private scene: Phaser.Scene;
     private sprite: Phaser.Physics.Matter.Sprite;
@@ -137,6 +137,7 @@ export default class BirdController {
         }
 
         return false;
+
     }
 
     private cleanup() {

@@ -1,0 +1,797 @@
+{
+	"textures": [
+		{
+			"image": "rat.webp",
+			"format": "RGBA8888",
+			"size": {
+				"w": 642,
+				"h": 32
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Rat_0032_Layer-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 18
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 28,
+						"h": 18
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 10
+					},
+					"frame": {
+						"x": 1,
+						"y": 21,
+						"w": 36,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 28,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 28,
+						"h": 18
+					},
+					"frame": {
+						"x": 31,
+						"y": 1,
+						"w": 28,
+						"h": 18
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-36.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 10
+					},
+					"frame": {
+						"x": 39,
+						"y": 21,
+						"w": 36,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 18
+					},
+					"frame": {
+						"x": 61,
+						"y": 1,
+						"w": 24,
+						"h": 18
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 77,
+						"y": 21,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 18
+					},
+					"frame": {
+						"x": 87,
+						"y": 1,
+						"w": 24,
+						"h": 18
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 109,
+						"y": 21,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 18
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 18
+					},
+					"frame": {
+						"x": 113,
+						"y": 1,
+						"w": 24,
+						"h": 18
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 139,
+						"y": 1,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 141,
+						"y": 17,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 175,
+						"y": 1,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-21.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 177,
+						"y": 17,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-25.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 211,
+						"y": 1,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-29.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 213,
+						"y": 17,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-33.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 14
+					},
+					"frame": {
+						"x": 247,
+						"y": 1,
+						"w": 34,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 249,
+						"y": 17,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 283,
+						"y": 1,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 287,
+						"y": 15,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 321,
+						"y": 1,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-20.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 325,
+						"y": 15,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-24.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 359,
+						"y": 1,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-28.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 363,
+						"y": 15,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-32.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 397,
+						"y": 1,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-37.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 36,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 12
+					},
+					"frame": {
+						"x": 401,
+						"y": 15,
+						"w": 36,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 435,
+						"y": 1,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 439,
+						"y": 15,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 471,
+						"y": 1,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-22.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 475,
+						"y": 15,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-26.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 507,
+						"y": 1,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-30.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 511,
+						"y": 15,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-34.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 34,
+						"h": 12
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 34,
+						"h": 12
+					},
+					"frame": {
+						"x": 543,
+						"y": 1,
+						"w": 34,
+						"h": 12
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 547,
+						"y": 15,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-23.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 579,
+						"y": 1,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-27.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 579,
+						"y": 13,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-31.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 611,
+						"y": 1,
+						"w": 30,
+						"h": 10
+					}
+				},
+				{
+					"filename": "Rat_0032_Layer-35.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 30,
+						"h": 10
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 30,
+						"h": 10
+					},
+					"frame": {
+						"x": 611,
+						"y": 13,
+						"w": 30,
+						"h": 10
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:6a87971b44a1ee85a539ea9cacbc3fb2:966f0b834105e70944d53813fa272e1d:b738532cd39935cf0b06eeba785012a2$"
+	}
+}

@@ -353,6 +353,17 @@ export default class PlayerController {
                 return;
             }
 
+            if( this.obstacles.isType('rat', body) ) {
+                this.lastHitBy = body.gameObject;
+                 if( ((player.position.y + 33) < body.position.y ) || this.powerUps.isBezerker()) {
+                    this.stateMachine.setState('stomped');
+                 }
+                 else {
+                     this.stateMachine.setState('hit');
+                }
+                return;
+            }
+
             if (this.obstacles.isType('dragon', body) ||
                 this.obstacles.isType('biden', body) ||
                 this.obstacles.isType('gary', body) ||
@@ -372,6 +383,7 @@ export default class PlayerController {
                 this.obstacles.isType('crow', body) ||
                 this.obstacles.isType('tnt', body) ||
                 this.obstacles.isType('boss', body) ||
+                this.obstacles.isType('frog', body) ||
                 this.obstacles.isType('fire', body)) {
                 this.lastHitBy = body.gameObject;
 
@@ -1305,8 +1317,6 @@ export default class PlayerController {
 
         this.isDead = true;
 
-        SceneFactory.resetSpawnPoint(this.scene);
-
         console.log("Player died! ");
 
         this.sprite.setInteractive(false);
@@ -1331,6 +1341,7 @@ export default class PlayerController {
         if (this.stats.livesRemaining == 0) {
             const bite = SceneFactory.krasotaSays(2,"");
             const s = this.sounds.get(bite);
+            SceneFactory.resetSpawnPoint(this.scene);
             if(s !== undefined ) {
                 s.on( 'complete', () => {
                     SceneFactory.krasotaUnlock();
@@ -1540,8 +1551,8 @@ export default class PlayerController {
             )) {
             this.scene.game.registry.set('playerX', nx);
             this.scene.game.registry.set('playerY', nny);
-            
         }
+
     }
 
     public changePosition(x, y, platform: Phaser.Physics.Matter.Sprite) {

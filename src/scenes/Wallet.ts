@@ -73,7 +73,7 @@ export default class Wallet extends Phaser.Scene {
                 .setOrigin(0.5);
         }
 
-        this.line2 = this.add.bitmapText(width * 0.5, height / 2 + 190, 'press_start', 'Unlimited play only for $TRUMP holders', 22)
+        this.line2 = this.add.bitmapText(width * 0.5, height / 2 + 190, 'press_start', 'Unlimited play only for everyone!', 22)
             .setTint(0xffffff)
             .setOrigin(0.5); 
 

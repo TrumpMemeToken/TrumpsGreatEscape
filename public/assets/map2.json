@@ -5889,7 +5889,7 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",
@@ -5908,12 +5908,12 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",
                          "type":"int",
-                         "value":50
+                         "value":100
                         }, 
                         {
                          "name":"sound",

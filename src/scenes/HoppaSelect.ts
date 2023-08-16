@@ -59,7 +59,7 @@ export default class HoppaSelect extends Phaser.Scene {
 
         this.createArrow();
 
-        this.startSinglePlayerLabel = this.add.bitmapText(width * 0.5, height / 2 + 108, 'press_start', 'Start', 48)
+        this.startSinglePlayerLabel = this.add.bitmapText(width * 0.5, height / 2 + 108, 'press_start', 'Play', 48)
             .setTint(0xffffff)
             .setOrigin(0.5);
 
@@ -67,7 +67,7 @@ export default class HoppaSelect extends Phaser.Scene {
             .setTint(0xffffff)
             .setOrigin(0.5); */
 
-        this.disconnectLabel = this.add.bitmapText(width * 0.5, height / 2 + 176, 'press_start', 'Disconnect', 48)
+        this.disconnectLabel = this.add.bitmapText(width * 0.5, height / 2 + 176, 'press_start', 'Quit', 48)
             .setTint(0xffffff)
             .setOrigin(0.5);
 
@@ -219,8 +219,8 @@ export default class HoppaSelect extends Phaser.Scene {
     }
 
     private continueGame() {
-        WalletHelper.init();
-        WalletHelper.getCurrentAccount();
+        WalletHelper.initEmpty();
+        //WalletHelper.getCurrentAccount();
 
         this.scene.stop();
         this.scene.start('start');

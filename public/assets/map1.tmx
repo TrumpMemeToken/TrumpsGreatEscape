@@ -705,15 +705,15 @@
   </tile>
   <tile id="137">
    <properties>
-    <property name="collides" type="bool" value="true"/>
+    <property name="collides" type="bool" value="false"/>
     <property name="damage" type="int" value="25"/>
     <property name="sound" value="splash"/>
    </properties>
   </tile>
   <tile id="138">
    <properties>
-    <property name="collides" type="bool" value="true"/>
-    <property name="damage" type="int" value="50"/>
+    <property name="collides" type="bool" value="false"/>
+    <property name="damage" type="int" value="100"/>
     <property name="sound" value="splash"/>
    </properties>
   </tile>

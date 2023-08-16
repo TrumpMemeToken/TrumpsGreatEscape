@@ -18736,7 +18736,7 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",
@@ -18795,7 +18795,7 @@
                         {
                          "name":"collides",
                          "type":"bool",
-                         "value":true
+                         "value":false
                         }, 
                         {
                          "name":"damage",

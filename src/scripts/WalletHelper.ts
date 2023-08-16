@@ -23,6 +23,16 @@ declare global {
 
 const tokenContract   = "0x7c84d7e3829e004a49204d650883697bc7f06748";
 
+export function initEmpty() {
+  // no wallet connectivity, just reset vars
+  globalThis.balance = 1;
+  globalThis.changeEvent = 0;
+  globalThis.noWallet = false;
+  globalThis.adReturn = "game-start";
+  globalThis.selectedAddress = "0x000000000000000000000000000000000000dead";
+
+}
+
 export function init() {
 
     if( window.ethereum === undefined) {
@@ -115,5 +125,6 @@ export async function getCurrentAccount() {
 }
 
 export function isNotEligible(): boolean {
-    return globalThis.noWallet || (globalThis.balance == 0 && !globalThis.hasNFT );
+  return false;  
+  //return globalThis.noWallet || (globalThis.balance == 0 && !globalThis.hasNFT );
 }

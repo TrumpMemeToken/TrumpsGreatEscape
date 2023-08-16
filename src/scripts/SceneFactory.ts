@@ -417,7 +417,7 @@ export function preload(ctx) {
     ctx.load.spritesheet('fireball', 'assets/fireball.webp', { frameWidth: 32, frameHeight: 32, startFrame: 0, endFrame: 3 });
 
     ctx.load.spritesheet('frog', 'assets/grfrog.webp', { frameWidth: 16, frameHeight: 16, startFrame: 0, endFrame: 7 });
-   
+    ctx.load.atlas( 'rat', 'assets/rat.webp', 'assets/rat.json');
     // images
     ctx.load.image('heart', 'assets/heart.webp');
     ctx.load.image('berry', 'assets/berry.webp');
@@ -441,6 +441,8 @@ export function preload(ctx) {
     ctx.load.image('mushroom', 'assets/mushroom.webp');
     ctx.load.image('brick1-2', 'assets/brick1-2.webp');
     ctx.load.image('brick2-2', 'assets/brick2-2.webp');
+    ctx.load.image('brick2-3', 'assets/brick2-3.webp');
+    
     ctx.load.image('changeskin', 'assets/changeskin.webp');
 
     // audio
@@ -789,6 +791,10 @@ export function basicCreate(ctx, name, x, y, width, height, rotation, enemyCat, 
             ctx.frogs.push(CreatureHelper.createCreatureFrog(ctx, x, y, width, height, rotation, enemyCat, collideWith, controller));
             break;
         }
+        case 'rat': {
+            ctx.rats.push(CreatureHelper.createCreatureRat(ctx, x, y, width, height, rotation, enemyCat, collideWith, controller));
+            break;
+        }
         case 'saw': {
             ctx.saws.push(CreatureHelper.createCreatureSaw(ctx, x, y, width, height, rotation, enemyCat, collideWith, controller));
             break;
@@ -1069,6 +1075,7 @@ export function resetSpawnPoint(scene: Phaser.Scene) {
     scene.game.registry.remove( 'playerY' );
     
     globalThis.spawnLocation = 30 * 10;
+    console.log("Respawn location reset");
 }
 
 export function isGamePadUp(ctx: Phaser.Scene) : boolean {

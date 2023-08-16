@@ -2,31 +2,30 @@ import StateMachine from "./StateMachine";
 import { sharedInstance as events } from './EventManager';
 import * as CreatureLogic from './CreatureLogic';
 
-export default class FrogController {
+export default class RatController {
     private scene: Phaser.Scene;
     private sprite: Phaser.Physics.Matter.Sprite;
     private stateMachine: StateMachine;
 
-    private moveTime = 0;
-    private velocityX = 0.5;
+ 
+    private velocityX = 1.0;
     private name: string;
-    private myMoveTime = 6000;
+    private stateTimer = 0;
+    private stateDuration = 0;
+
     private garbage: boolean = false;
 
     constructor(
         scene: Phaser.Scene,
         sprite: Phaser.Physics.Matter.Sprite,
         name: string,
-        startFrame: number,
-        endFrame: number,
-        fps: number,
         velocityX: number = 0.5,
     ) {
         this.scene = scene;
         this.sprite = sprite;
         this.name = name;
      //   this.velocityX = velocityX;
-        this.createAnim(name, startFrame, endFrame, fps);
+        this.createAnims();
         this.stateMachine = new StateMachine(this);
 
         this.stateMachine.addState('idle', {
@@ -42,7 +41,7 @@ export default class FrogController {
             })
             .setState('idle');
 
-        this.velocityX += Phaser.Math.Between(0.0, + 0.15);
+        this.velocityX += Phaser.Math.Between(0.0, + 0.75);
         events.on(this.name + '-stomped', this.handleStomped, this);
         events.on(this.name + '-blocked', this.handleBlocked, this);
     }
@@ -56,6 +55,10 @@ export default class FrogController {
 
     update(deltaTime: number) {
         this.stateMachine.update(deltaTime);
+    
+        this.stateTimer += deltaTime;
+
+        this.slumber();
     }
 
     public getSprite() {
@@ -78,43 +81,37 @@ export default class FrogController {
     }
 
     private moveRightOnEnter() {
-        this.moveTime = 0;
+        this.sprite.play('walk');
+        this.velocityX = 1.0 + (Phaser.Math.FloatBetween(0.0, 0.5));
     }
 
     private moveRightOnUpdate(deltaTime: number) {
-        this.moveTime += deltaTime;
         this.sprite.flipX = true;
         this.sprite.setVelocityX(-1 * this.velocityX);
-
-        if (this.moveTime > this.myMoveTime) {
-            this.stateMachine.setState('move-left');
-        }
     }
 
     private moveLeftOnEnter() {
-        this.moveTime = 0;
+        this.sprite.play('walk');
+        this.velocityX = 1.0 + (Phaser.Math.FloatBetween(0.0, 0.5));
     }
 
     private moveLeftOnUPdate(deltaTime: number) {
-        this.moveTime += deltaTime;
         this.sprite.flipX = false;
         this.sprite.setVelocityX(this.velocityX);
-
-        if (this.moveTime > this.myMoveTime) {
-            this.stateMachine.setState('move-right');
-        }
     }
 
     private idleOnEnter() {
-
+        this.velocityX = 0.0;
         this.sprite.play('idle');
-        this.stateMachine.setState('move-right');
     }
 
     private handleStomped(frog: Phaser.Physics.Matter.Sprite) {
         if (this.sprite !== frog) {
             return;
         }
+
+        events.off(this.name + '-stomped', this.handleStomped, this);
+
         this.stateMachine.setState('dead');
         this.garbage = true;
         
@@ -124,12 +121,34 @@ export default class FrogController {
         this.cleanup(); 
     }
 
+ 
+
+    private slumber() {
+        if( this.stateTimer > this.stateDuration ) {
+            const walkOrBore = Phaser.Math.Between(1,3);
+
+            switch(walkOrBore) {
+                case 1:
+                    this.stateMachine.setState( 'move-left' );
+                    break;
+                case 2:
+                    this.stateMachine.setState( 'move-right' );
+                    break;
+                default:
+                    this.stateMachine.setState( 'idle' );
+                    break;
+            }
+
+            this.stateTimer = 0;
+            this.stateDuration = Phaser.Math.Between(2500,6300);   
+        }
+    }
+
+
     private handleBlocked(frog: Phaser.Physics.Matter.Sprite) {
         if (this.sprite !== frog) {
             return;
         }
-
-        this.moveTime = 0;
 
         if (this.sprite.flipX) {
             this.stateMachine.setState('move-left');
@@ -152,15 +171,30 @@ export default class FrogController {
         this.sprite = undefined;
     }
 
-    private createAnim(name: string, startFrame: number, endFrame: number, fps: number) { 
-      this.sprite.anims.create( {
-        key: 'idle',
-        frames: this.sprite.anims.generateFrameNames(name, {
-            start: startFrame, //0,
-            end: endFrame, // 7
-        }),
-        frameRate: fps,
-        repeat: -1,
-      })   
+
+    private createAnims() {
+        this.sprite.anims.create({
+            key: 'idle',
+            frameRate: 0.5,
+            repeat: -1,
+            frames: this.sprite.anims.generateFrameNames('rat', {
+                start: 1,
+                end: 5,
+                prefix: 'Rat_0032_Layer-',
+                suffix: '.png'
+            })
+        });
+
+        this.sprite.anims.create({
+            key: 'walk',
+            frameRate: 10,
+            repeat: -1,
+            frames: this.sprite.anims.generateFrameNames('rat', {
+                start: 6,
+                end: 37,
+                prefix: 'Rat_0032_Layer-',
+                suffix: '.png'
+            })
+        });
     }
 }

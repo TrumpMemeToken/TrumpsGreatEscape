@@ -1,5 +1,5 @@
-var cacheName = 'game-cache-v1.10';
-var cacheWhiteList = [ "game-cache-v1.10" ];
+var cacheName = 'game-cache-v1.11';
+var cacheWhiteList = [ "game-cache-v1.11" ];
 
 var filesToCache = [
   '/trumpsgreatescape/assets/arrow.webp',
@@ -20,6 +20,8 @@ var filesToCache = [
   '/trumpsgreatescape/assets/back22.webp',
   '/trumpsgreatescape/assets/back23.webp',
   '/trumpsgreatescape/assets/back24.webp',
+  '/trumpsgreatescape/assets/back25.webp',
+  '/trumpsgreatescape/assets/back26.webp',
   '/trumpsgreatescape/assets/back3.webp',
   '/trumpsgreatescape/assets/back4.webp',
   '/trumpsgreatescape/assets/back5.webp',
@@ -167,6 +169,7 @@ var filesToCache = [
   '/trumpsgreatescape/assets/map7.json',
   '/trumpsgreatescape/assets/map8.json',
   '/trumpsgreatescape/assets/map9.json',
+  '/trumpsgreatescape/assets/map10.json',
   '/trumpsgreatescape/assets/money-emitter.json',
   '/trumpsgreatescape/assets/money.json',
   '/trumpsgreatescape/assets/monster.json',
@@ -463,6 +466,7 @@ var filesToCache = [
   '/trumpsgreatescape/assets/yourfaceyourass.mp3',
   '/trumpsgreatescape/assets/press_start_2p.fnt',
   '/trumpsgreatescape/assets/grfrog.webp',
+  '/trumpsgreatescape/assets/snow.webp',
 ];
 
 self.addEventListener('install', function(e) {

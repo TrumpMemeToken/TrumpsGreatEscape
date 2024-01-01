@@ -1682,7 +1682,7 @@
   <object id="848" name="obama" x="13175" y="2085.27" width="56" height="84"/>
   <object id="849" name="gary" x="9525.58" y="2133.82" width="64" height="96"/>
   <object id="850" name="gary" x="10795.3" y="2645.94" width="64" height="96"/>
-  <object id="851" name="saw" x="320" y="2752" width="64" height="32"/>
+  <object id="851" name="saw" x="320" y="2751.67" width="64" height="32"/>
   <object id="852" name="saw" x="8448" y="1344" width="64" height="32"/>
   <object id="853" name="saw" x="6528" y="1984" width="64" height="32"/>
   <object id="854" name="saw" x="9408" y="2688" width="64" height="32"/>
@@ -1740,7 +1740,6 @@
   <object id="908" name="bat" x="13504" y="2760" width="64" height="64"/>
   <object id="909" name="bat" x="12992" y="2760" width="64" height="64"/>
   <object id="910" name="saw" x="11456" y="2496" width="64" height="32"/>
-  <object id="911" name="saw" x="11968" y="2176" width="64" height="32"/>
   <object id="912" name="saw" x="14848" y="2880" width="64" height="32"/>
   <object id="913" name="saw" x="13824" y="2880" width="64" height="32"/>
  </objectgroup>

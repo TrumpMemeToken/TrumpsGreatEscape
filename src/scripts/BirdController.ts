@@ -116,7 +116,7 @@ export default class BirdController {
 
         this.moveTime = 0;
 
-        if (!this.sprite.flipX) {
+        if (this.sprite.flipX) {
             this.stateMachine.setState('move-right');
         }
         else {

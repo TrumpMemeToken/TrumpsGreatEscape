@@ -358,6 +358,7 @@ export function preload(ctx) {
 
     ctx.load.image('groundTilesv1', 'assets/terrainv3.webp');
     ctx.load.image('groundTiles', 'assets/terrainv4-extruded.webp');
+    ctx.load.image('groundTilesv2', 'assets/terrainv5.webp');
     ctx.load.image('propTiles', 'assets/spritesheet_props_extruded.webp');
     ctx.load.image('grasTiles', 'assets/gras.webp');
     ctx.load.image('grasPurpleTiles', 'assets/gras-purple.webp');

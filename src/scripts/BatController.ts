@@ -22,8 +22,7 @@ export default class BatController {
         this.createAnims();
 
         this.stateMachine = new StateMachine(this);
-        this.velocityX = Phaser.Math.Between(6.55, 7.25);
-
+        
         this.stateMachine.addState('idle', {
             onEnter: this.idleOnEnter
         })
